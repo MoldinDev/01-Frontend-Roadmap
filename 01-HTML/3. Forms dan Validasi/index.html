@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get" autocomplete="off">
+        <div>
+            <label>
+                Masukkan Nama: <br>
+                <input required oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Ini harus diisi!')" autofocus type="text" name="nama" id="nama">
+            </label>
+        </div>
+        <div>
+            <label>
+                Masukkan Email: <br>
+                <input autocomplete="off" type="email" name="email" id="email">
+            </label>
+        </div>
+        <div>
+            <label>
+                Masukkan No Telp : <br>
+                <input pattern="(\+62|62|0)8[1-9][0-9]{6,10}$" type="tel" name="tel" id="tel">
+            </label>
+        </div>
+        <div>
+            <label>
+                Masukkan Password : <br>
+                <input type="password" name="Password" id="Password">
+            </label>
+        </div>
+        <div>
+            <label>
+                Pilih Warna : <br>
+                <input type="color" name="Warna" id="Warna">
+            </label>
+        </div>
+        <div>
+            <label>
+                Pilih Tanggal : <br>
+                <input required type="date" name="Tanggal" id="Tanggal">
+            </label>
+        </div>
+        <div>
+            <label>
+                Geser : <br>
+                <span id="awal"></span>
+                <input type="range" name="Geser" id="geser">
+                <span id="akhir"></span>
+            </label>
+        </div>
+        <div>
+            <label>
+                Angka : <br>
+                <input min="10" max="100" step="10" type="number" name="Angka" id="Angka">
+            </label>
+        </div>
+        <div>
+            <label>
+                Masukkan Kode POS: <br>
+                <input pattern="^([1-9])[0-9]{4}$" type="POS" name="POS" id="POS">
+            </label>
+        </div>
+        <div>
+            <button type="submit">Kirim!</button>
+        </div>
+    </form>
+
+    <script>
+        const slider = document.querySelector('#geser')
+        const awal = document.querySelector('#awal')
+        const akhir = document.querySelector('#akhir')
+
+        awal.innerHTML = "0"
+        akhir.innerHTML = "100"
+
+        slider.addEventListener('input', () => {
+            akhir.innerHTML = slider.value
+        })
+    </script>
+</body>
+</html>

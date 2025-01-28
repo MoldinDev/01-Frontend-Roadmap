@@ -1,0 +1,57 @@
+a:link {
+    color: red;
+}
+
+a:active {
+    color: blue;
+}
+
+a:visited {
+    color: tomato;
+}
+
+a:hover {
+    color: cadetblue;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+button {
+    margin-left: 10px;
+    width: 150px;
+    height: 50px;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+button:active {
+    background-color: grey;
+    border: 3px solid black;
+}
+
+ul {
+    width: 250px;
+}
+
+li:nth-child(odd) {
+    background-color: tomato;
+}
+
+/* li:nth-child(even) {
+    background-color: blue;
+} */
+
+li:nth-child(1)::before { content: "🔍"; }
+li:nth-child(2):before { content: "😅"; }
+li:nth-child(3):before { content: "🙂"; }
+li:nth-child(4):before { content: "👌"; }
+li:nth-child(5):before { content: "🙏"; }
+li:nth-child(6):before { content: "☝️"; }
+li:nth-child(7):before { content: "😊"; }
+li:nth-child(8):before { content: "📚"; }
+li:nth-child(9)::after { content: "😋"; }
+li:nth-child(10)::after { content: "🔍"; }

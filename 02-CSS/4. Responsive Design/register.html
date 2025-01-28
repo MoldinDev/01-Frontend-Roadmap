@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <div>
+        <h1>Register</h1>
+        <form action="">
+            <div>
+                <label>
+                    Name: <br>
+                    <input pattern="^[a-zA-Z\s\-\']+$" type="text" name="name" id="name">
+                </label>
+                <br>
+                <label>
+                    Username: <br>
+                    <input pattern="^[a-zA-Z0-9]+$" type="text" name="username" id="username">
+                </label>
+                <br>
+                <label>
+                    Email: <br>
+                    <input type="email" name="email" id="email">
+                </label>
+                <br>
+                <label>
+                    Password: <br>
+                    <input type="password" name="password" id="password">
+                </label>
+                <br><br>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
